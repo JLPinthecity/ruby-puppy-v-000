@@ -5,7 +5,6 @@ class Dog
 
   def initialize(name)
     @name = name
-    @@all << self
   end
 
   def self.all
@@ -20,6 +19,10 @@ class Dog
     @@all.map do |dog|
       print dog.name
     end
+
+  def save
+    @@all << self
+  end
 
 
 
